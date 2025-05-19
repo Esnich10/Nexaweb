@@ -56,7 +56,7 @@ export default {};
 }
 
 .custom-navbar {
-  background-color: #0a0a0a !important;
+  background-color: black !important;
 }
 
 .custom-navbar .nav-link {
