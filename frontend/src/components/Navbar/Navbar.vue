@@ -1,8 +1,10 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top shadow"
+    >
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <router-link class="navbar-brand" to="/">Navbar</router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -20,16 +22,22 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
+              <router-link class="nav-link active" to="/">Inicio</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Nosotros</a>
+              <router-link class="nav-link" to="/nosotros"
+                >Nosotros</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
+              <router-link class="nav-link" to="/servicios"
+                >Servicios</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-white" href="#">Contáctanos</a>
+              <router-link class="nav-link fw-bold text-white" to="/contacto"
+                >Contáctanos</router-link
+              >
             </li>
           </ul>
         </div>
@@ -37,7 +45,25 @@
     </nav>
   </div>
 </template>
+
 <script>
 export default {};
 </script>
-<style></style>
+
+<style>
+.navbar {
+  min-height: 70px;
+}
+
+.custom-navbar {
+  background-color: #0a0a0a !important;
+}
+
+.custom-navbar .nav-link {
+  color: white !important; /* o cualquier otro color como #ff4a4a */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ff4a4a !important; /* color al pasar el mouse */
+}
+</style>
